@@ -160,6 +160,8 @@ class BigramLanguageModel(nn.Module):
             idx = torch.cat((idx, idx_next), dim=1)
         return idx
 
+# -------------------------------------------------------------------------------------------------------
+
 model = BigramLanguageModel()
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
