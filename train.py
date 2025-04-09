@@ -183,4 +183,4 @@ for iter in range(max_iters):
 context = torch.zeros((1, 1), dtype=torch.long)
 print(decode(model.generate(context, max_new_tokens=500)[0].tolist()))
 
-# test
+torch.save(model.state_dict(), 'GPT_model.pth')
